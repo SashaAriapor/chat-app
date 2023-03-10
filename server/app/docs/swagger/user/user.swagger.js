@@ -98,3 +98,30 @@
  *          406: 
  *              description: NOT_ACCEPTED
  */
+
+/**
+ * @swagger
+ *  /user/update-username:
+ *      post:
+ *          tags: [User]
+ *          summary: update username
+ *          description: update user username
+ *          requestBody:
+ *              required: true
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          type: object
+ *                          properties:
+ *                              username:
+ *                                  type: string
+ *          responses:
+ *              200: 
+ *                  description: Success
+ *              400: 
+ *                  description: Bad Request
+ *              401: 
+ *                  description: Unauthorization
+ *              500: 
+ *                  description: Internal Server Error 
+ */

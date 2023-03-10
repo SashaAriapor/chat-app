@@ -24,8 +24,19 @@ function updateProfileImageValidator() {
         })
     ]
 }
+function updateUsernameValidator() {
+    return [
+        body("username").custom((value, ctx) => {
+            if(value.length < 3) throw "username is too short";
+            if(value.length > 12) throw "username is too long";
+            return true;
+        }) 
+    ]
+}
+
 
 module.exports = {
     updateProfileValidator,
-    updateProfileImageValidator
+    updateProfileImageValidator,
+    updateUsernameValidator
 }
